@@ -12,7 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld"
         android:usesCleartextTraffic="true">
-        <activity android:name=".LifeCycleActivity"></activity>
+        <activity
+            android:name="jump.BActivity"
+            android:label="B"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="com.marten.test.BActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="jump.AActivity"
+            android:label="A"
+            android:launchMode="singleTop" />
+        <activity android:name=".LifeCycleActivity" />
         <activity android:name=".PopupWindowActivity" />
         <activity android:name=".CustomDialogActivity" />
         <activity android:name=".ProgressActivity" />

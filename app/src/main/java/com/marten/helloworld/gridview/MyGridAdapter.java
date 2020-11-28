@@ -48,7 +48,7 @@ public class MyGridAdapter extends BaseAdapter {
             convertView = mLayoutInflater.inflate(R.layout.layout_grid_item, null);
             holder = new ViewHolder();
             holder.imageView = convertView.findViewById(R.id.iv_grid);
-            holder.textView = convertView.findViewById(R.id.tv_tittle);
+            holder.textView = convertView.findViewById(R.id.tv_title);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();

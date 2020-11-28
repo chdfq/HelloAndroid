@@ -83,7 +83,7 @@ public class LinearAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
         public LinearViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.tv_tittle);
+            textView = itemView.findViewById(R.id.tv_title);
         }
     }
 
@@ -95,7 +95,7 @@ public class LinearAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
         public LinearViewHolder2(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.tv_tittle);
+            textView = itemView.findViewById(R.id.tv_title);
             imageView = itemView.findViewById(R.id.iv_image);
         }
     }

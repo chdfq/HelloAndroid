@@ -21,7 +21,7 @@ public class ToggleButtonAndSwitchActivity extends AppCompatActivity {
         mTb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                Toast.makeText(ToggleButtonAndSwitchActivity.this,isChecked?"togglebutton On":"togglebutton Off",Toast.LENGTH_SHORT).show();
+                Toast.makeText(ToggleButtonAndSwitchActivity.this,isChecked?"togglebutton Off":"togglebutton On",Toast.LENGTH_SHORT).show();
             }
         });
 

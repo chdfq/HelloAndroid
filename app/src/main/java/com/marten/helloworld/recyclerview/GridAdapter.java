@@ -61,7 +61,7 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.LinearViewHold
 
         public LinearViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.tv_tittle);
+            textView = itemView.findViewById(R.id.tv_title);
         }
     }
 

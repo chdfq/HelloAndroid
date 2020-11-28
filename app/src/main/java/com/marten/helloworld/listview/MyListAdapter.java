@@ -49,7 +49,7 @@ public class MyListAdapter extends BaseAdapter {
             convertView = mLayoutInflater.inflate(R.layout.layout_list_item, parent,false);
             holder = new ViewHolder();
             holder.imageView = convertView.findViewById(R.id.iv);
-            holder.tvTittle = convertView.findViewById(R.id.tv_tittle);
+            holder.tvTittle = convertView.findViewById(R.id.tv_title);
             holder.tvTime = convertView.findViewById(R.id.tv_time);
             holder.tvContent = convertView.findViewById(R.id.tv_content);
             convertView.setTag(holder);
