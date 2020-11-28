@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CustomDialogActivity"></activity>
+        <activity android:name=".PopupWindowActivity"></activity>
+        <activity android:name=".CustomDialogActivity" />
         <activity android:name=".ProgressActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
