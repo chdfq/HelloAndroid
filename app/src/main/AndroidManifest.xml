@@ -12,12 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld"
         android:usesCleartextTraffic="true">
+        <activity android:name=".fragment.ContainerActivity"></activity>
         <activity
             android:name="jump.BActivity"
             android:label="B"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="com.marten.test.BActivity" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
