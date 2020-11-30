@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnLifeCycle;
     private Button mBtnJump;
     private Button mBtnFragment;
+    private Button mBtnEvent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +29,13 @@ public class MainActivity extends AppCompatActivity {
         mBtnLifeCycle = findViewById(R.id.btn_lifecycle);
         mBtnJump = findViewById(R.id.btn_jump);
         mBtnFragment = findViewById(R.id.btn_fragment);
+        mBtnEvent = findViewById(R.id.btn_event);
         OnClick onClick = new OnClick();
         mBtnUI.setOnClickListener(onClick);
         mBtnLifeCycle.setOnClickListener(onClick);
         mBtnJump.setOnClickListener(onClick);
         mBtnFragment.setOnClickListener(onClick);
+        mBtnEvent.setOnClickListener(onClick);
 
     }
 
@@ -52,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_fragment:
                     intent = new Intent(MainActivity.this, ContainerActivity.class);
+                    break;
+                case R.id.btn_event:
+                    intent = new Intent(MainActivity.this, EventActivity.class);
                     break;
             }
             startActivity(intent);
