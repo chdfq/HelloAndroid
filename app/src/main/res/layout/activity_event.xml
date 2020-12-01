@@ -10,7 +10,13 @@
         android:layout_height="wrap_content"
         android:text="click me"
         android:textAllCaps="false"
-        android:onClick="show"/>
+        android:onClick="show" />
 
+    <com.marten.helloworld.widget.MyButton
+        android:id="@+id/btn_my"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Button"
+        android:textAllCaps="false" />
 
 </LinearLayout>

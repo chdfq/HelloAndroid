@@ -2,22 +2,37 @@ package com.marten.helloworld;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.marten.helloworld.util.ToastUtil;
+import com.marten.helloworld.widget.MyButton;
 
 public class EventActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mBtnEvent;
+    private MyButton mBtnMy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
         mBtnEvent = findViewById(R.id.btn_event);
+        mBtnMy = findViewById(R.id.btn_my);
+        mBtnMy.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        Log.d("Listener", "----onTouch----");
+                        break;
+                }
+                return false;
+            }
+        });
         //内部类实现
         mBtnEvent.setOnClickListener(new OnClick());
 //        //匿名内部类
@@ -62,5 +77,15 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
                 ToastUtil.showMsg(EventActivity.this, "click...");
                 break;
         }
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                Log.d("Activity", "----onTouchEvent----");
+                break;
+        }
+        return false;
     }
 }
