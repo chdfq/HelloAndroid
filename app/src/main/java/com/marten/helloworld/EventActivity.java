@@ -30,6 +30,18 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
                         Log.d("Listener", "----onTouch----");
                         break;
                 }
+                return true;
+            }
+        });
+        mBtnMy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("Listener", "----onClick----");
+            }
+        });
+        mBtnMy.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
                 return false;
             }
         });

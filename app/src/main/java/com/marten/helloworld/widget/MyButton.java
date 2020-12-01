@@ -21,15 +21,21 @@ public class MyButton extends androidx.appcompat.widget.AppCompatButton {
         super(context, attrs, defStyleAttr);
     }
 
+    //入口方法
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        Log.d("MyButton", "----dispatchTouchEvent----");
+        return super.dispatchTouchEvent(event);
+    }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        super.onTouchEvent(event);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 Log.d("MyButton", "----onTouchEvent----");
                 break;
         }
-        return true;
+        return super.onTouchEvent(event);
         //返回值false-其他事件接着处理 true-其他事件不处理，不传播
     }
 }
