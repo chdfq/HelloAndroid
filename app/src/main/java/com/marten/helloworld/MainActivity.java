@@ -1,14 +1,12 @@
 package com.marten.helloworld;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 
-import com.marten.helloworld.fragment.AFragment;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.marten.helloworld.fragment.ContainerActivity;
 
 import jump.AActivity;
@@ -20,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnJump;
     private Button mBtnFragment;
     private Button mBtnEvent;
+    private Button mBtnAnimator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +29,14 @@ public class MainActivity extends AppCompatActivity {
         mBtnJump = findViewById(R.id.btn_jump);
         mBtnFragment = findViewById(R.id.btn_fragment);
         mBtnEvent = findViewById(R.id.btn_event);
+        mBtnAnimator = findViewById(R.id.btn_animator);
         OnClick onClick = new OnClick();
         mBtnUI.setOnClickListener(onClick);
         mBtnLifeCycle.setOnClickListener(onClick);
         mBtnJump.setOnClickListener(onClick);
         mBtnFragment.setOnClickListener(onClick);
         mBtnEvent.setOnClickListener(onClick);
+        mBtnAnimator.setOnClickListener(onClick);
 
     }
 
@@ -58,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_event:
                     intent = new Intent(MainActivity.this, EventActivity.class);
+                    break;
+                case R.id.btn_animator:
+                    intent = new Intent(MainActivity.this, ObjectAnimatorActivity.class);
                     break;
             }
             startActivity(intent);
