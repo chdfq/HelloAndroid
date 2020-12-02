@@ -1,5 +1,6 @@
 package com.marten.helloworld;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -13,7 +14,7 @@ import com.marten.helloworld.widget.MyButton;
 
 public class EventActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button mBtnEvent;
+    private Button mBtnEvent, mBtnHandler;
     private MyButton mBtnMy;
 
     @Override
@@ -21,6 +22,7 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
         mBtnEvent = findViewById(R.id.btn_event);
+        mBtnHandler = findViewById(R.id.btn_handler);
         mBtnMy = findViewById(R.id.btn_my);
         mBtnMy.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -59,6 +61,14 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
 //        mBtnEvent.setOnClickListener(EventActivity.this);
 //        //通过外部类实现
 //        mBtnEvent.setOnClickListener(new MyClickListener(EventActivity.this));
+
+        mBtnHandler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventActivity.this,HandlerActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
