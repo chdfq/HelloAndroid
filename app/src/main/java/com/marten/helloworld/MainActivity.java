@@ -18,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnJump;
     private Button mBtnFragment;
     private Button mBtnEvent;
-    private Button mBtnAnimator;
+    private Button mBtnObjAnimator;
+    private Button mBtnViewAnimator;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +31,17 @@ public class MainActivity extends AppCompatActivity {
         mBtnJump = findViewById(R.id.btn_jump);
         mBtnFragment = findViewById(R.id.btn_fragment);
         mBtnEvent = findViewById(R.id.btn_event);
-        mBtnAnimator = findViewById(R.id.btn_animator);
+        mBtnObjAnimator = findViewById(R.id.btn_obj_animator);
+        mBtnViewAnimator = findViewById(R.id.btn_view_animator);
+
         OnClick onClick = new OnClick();
         mBtnUI.setOnClickListener(onClick);
         mBtnLifeCycle.setOnClickListener(onClick);
         mBtnJump.setOnClickListener(onClick);
         mBtnFragment.setOnClickListener(onClick);
         mBtnEvent.setOnClickListener(onClick);
-        mBtnAnimator.setOnClickListener(onClick);
+        mBtnObjAnimator.setOnClickListener(onClick);
+        mBtnViewAnimator.setOnClickListener(onClick);
 
     }
 
@@ -60,8 +65,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_event:
                     intent = new Intent(MainActivity.this, EventActivity.class);
                     break;
-                case R.id.btn_animator:
+                case R.id.btn_obj_animator:
                     intent = new Intent(MainActivity.this, ObjectAnimatorActivity.class);
+                    break;
+                case R.id.btn_view_animator:
+                    intent = new Intent(MainActivity.this, ViewAnimatorActivity.class);
                     break;
             }
             startActivity(intent);

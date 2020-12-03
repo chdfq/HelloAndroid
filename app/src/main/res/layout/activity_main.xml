@@ -40,9 +40,16 @@
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/btn_animator"
+        android:id="@+id/btn_obj_animator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="动画"
+        android:text="属性动画和逐帧动画"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_view_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="补间动画"
         android:textAllCaps="false" />
 </LinearLayout>
