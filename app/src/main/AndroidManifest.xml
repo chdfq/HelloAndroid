@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ViewAnimatorActivity"></activity>
+        <activity android:name=".datastorage.SharedPreferencesActivity"></activity>
+        <activity android:name=".datastorage.DataStorageActivity" />
+        <activity android:name=".ViewAnimatorActivity" />
         <activity android:name=".ObjectAnimatorActivity" />
         <activity android:name=".HandlerActivity" />
         <activity android:name=".EventActivity" />

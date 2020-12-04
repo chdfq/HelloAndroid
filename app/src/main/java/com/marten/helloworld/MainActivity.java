@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.marten.helloworld.datastorage.DataStorageActivity;
 import com.marten.helloworld.fragment.ContainerActivity;
 
 import jump.AActivity;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnEvent;
     private Button mBtnObjAnimator;
     private Button mBtnViewAnimator;
+    private Button mBtnData;
 
 
     @Override
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnEvent = findViewById(R.id.btn_event);
         mBtnObjAnimator = findViewById(R.id.btn_obj_animator);
         mBtnViewAnimator = findViewById(R.id.btn_view_animator);
+        mBtnData = findViewById(R.id.btn_data);
 
         OnClick onClick = new OnClick();
         mBtnUI.setOnClickListener(onClick);
@@ -42,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnEvent.setOnClickListener(onClick);
         mBtnObjAnimator.setOnClickListener(onClick);
         mBtnViewAnimator.setOnClickListener(onClick);
+        mBtnData.setOnClickListener(onClick);
 
     }
 
@@ -70,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_view_animator:
                     intent = new Intent(MainActivity.this, ViewAnimatorActivity.class);
+                    break;
+                case R.id.btn_data:
+                    intent = new Intent(MainActivity.this, DataStorageActivity.class);
                     break;
             }
             startActivity(intent);
