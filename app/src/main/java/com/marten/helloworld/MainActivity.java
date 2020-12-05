@@ -1,11 +1,13 @@
 package com.marten.helloworld;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.marten.helloworld.datastorage.DataStorageActivity;
 import com.marten.helloworld.fragment.ContainerActivity;
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnObjAnimator.setOnClickListener(onClick);
         mBtnViewAnimator.setOnClickListener(onClick);
         mBtnData.setOnClickListener(onClick);
+
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);   //sdk版本23以后存储到sd卡需要动态申请权限
 
     }
 
