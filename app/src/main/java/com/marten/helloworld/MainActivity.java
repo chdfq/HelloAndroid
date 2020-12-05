@@ -9,6 +9,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.marten.helloworld.broadcast.BroadActivity;
 import com.marten.helloworld.datastorage.DataStorageActivity;
 import com.marten.helloworld.fragment.ContainerActivity;
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnObjAnimator;
     private Button mBtnViewAnimator;
     private Button mBtnData;
+    private Button mBtnBroad;
 
 
     @Override
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnObjAnimator = findViewById(R.id.btn_obj_animator);
         mBtnViewAnimator = findViewById(R.id.btn_view_animator);
         mBtnData = findViewById(R.id.btn_data);
+        mBtnBroad = findViewById(R.id.btn_broad);
 
         OnClick onClick = new OnClick();
         mBtnUI.setOnClickListener(onClick);
@@ -48,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnObjAnimator.setOnClickListener(onClick);
         mBtnViewAnimator.setOnClickListener(onClick);
         mBtnData.setOnClickListener(onClick);
+        mBtnBroad.setOnClickListener(onClick);
 
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);   //sdk版本23以后存储到sd卡需要动态申请权限
 
@@ -81,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_data:
                     intent = new Intent(MainActivity.this, DataStorageActivity.class);
+                    break;
+                case R.id.btn_broad:
+                    intent = new Intent(MainActivity.this, BroadActivity.class);
                     break;
             }
             startActivity(intent);

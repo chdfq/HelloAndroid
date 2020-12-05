@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld"
         android:usesCleartextTraffic="true">
-        <activity android:name=".datastorage.FileActivity"></activity>
+        <activity android:name=".broadcast.BroadActivity2"></activity>
+        <activity android:name=".broadcast.BroadActivity" />
+        <activity android:name=".datastorage.FileActivity" />
         <activity android:name=".datastorage.SharedPreferencesActivity" />
         <activity android:name=".datastorage.DataStorageActivity" />
         <activity android:name=".ViewAnimatorActivity" />
